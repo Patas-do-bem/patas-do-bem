@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Patas do Bem</title>
+
+    <link rel="icon" type="image/png" href="Imagens/pata.PNG">
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="perfil.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+   
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a class="nav-logo" href="index.html">
+                <img src="Imagens/logo (3).PNG" alt="">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link-item">Início</a></li>
+                <li><a href="instacao.html" class="nav-link-item active">InstaCão</a></li>
+                <li><a href="caes.html" class="nav-link-item">Cães</a></li>
+                <li><a href="adocao.html" class="nav-link-item">Adoção</a></li>
+                <li><a href="doacoes.html" class="nav-link-item">Doações</a></li>
+                <li><a href="ocorrencias.html" class="nav-link-item">Ocorrências</a></li>
+                <li><a href="contato.html" class="nav-link-item">Contato</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="perfil.html" class="btn btn-primary" id="btn">
+                    <i class=""></i>
+                    
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="voltar-site">
+
+        <a href="index.html">
+            <i class="ph ph-arrow-left"></i>
+            Voltar ao Site
+        </a>
+
+    </div>
+
+    <section class="perfil-container">
+
+        <div class="perfil-topo">
+
+            <div class="perfil-foto">
+                <i class="ph-fill ph-shield-check"></i>
+            </div>
+
+            <div class="perfil-info">
+                <h1 id="nomePerfil">Usuário</h1>
+                <p id="emailPerfil">email@exemplo.com</p>
+
+                <span class="perfil-tag admin-tag">
+                    Administrador
+                </span>
+            </div>
+
+            <button class="btn-sair">
+                <i class="ph ph-sign-out"></i>
+                Sair
+            </button>
+
+        </div>
+
+        <!-- Estatísticas -->
+
+        <div class="perfil-estatisticas">
+
+            <div class="card-estatistica">
+                <i class="ph ph-paw-print"></i>
+                <h2 id="totalCaes">0</h2>
+                <p>Cães Cadastrados</p>
+            </div>
+
+            <div class="card-estatistica">
+                <i class="ph ph-warning-circle"></i>
+                <tbody id="tabelaOcorrenciasAdmin"></tbody>
+            </div>
+
+            <div class="card-estatistica">
+                <i class="ph ph-users"></i>
+                <tbody id="tabelaUsuarios"></tbody>
+            </div>
+
+            <div class="card-estatistica">
+                <i class="ph ph-camera"></i>
+                <h2 id="totalPostsAdmin">0</h2>
+                <p>Posts InstaCão</p>
+            </div>
+
+        </div>
+
+        <!-- Ações -->
+
+        <div class="perfil-acoes">
+
+            <a href="#" class="acao-card">
+                <i class="ph ph-warning-circle"></i>
+                <span>Gerenciar Ocorrências</span>
+            </a>
+
+            <a href="cadastro-caes.html" class="acao-card">
+                <i class="ph ph-paw-print"></i>
+                <span>Cadastrar caes</span>
+            </a>
+
+            <a href="#" class="acao-card">
+                <i class="ph ph-users"></i>
+                <span>Gerenciar Usuários</span>
+            </a>
+
+            <a href="#" class="acao-card">
+                <i class="ph ph-chart-bar"></i>
+                <span>Relatórios</span>
+            </a>
+
+        </div>
+
+        <!-- Ocorrências -->
+
+        <div class="perfil-secao">
+
+            <h2>Gerenciar Ocorrências</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>#101</td>
+                        <td>Animal Ferido</td>
+
+                        <td>
+                            <select class="admin-select">
+                                <option>Aberta</option>
+                                <option>Em análise</option>
+                                <option>Em atendimento</option>
+                                <option>Resolvida</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <button class="btn-admin">
+                                Salvar
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Cães -->
+
+        <div class="perfil-secao">
+
+            <div class="secao-header">
+
+                <h2>Gerenciar Cães</h2>
+
+                <button class="btn-admin">
+                    Cadastrar Cão
+                </button>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Pipoca</td>
+                        <td>Campus</td>
+
+                        <td>
+
+                            <button class="btn-admin">
+                                Editar
+                            </button>
+
+                            <button class="btn-admin-danger">
+                                Excluir
+                            </button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Usuários -->
+
+        <div class="perfil-secao">
+
+            <h2>Gerenciar Usuários</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Maria Souza</td>
+                        <td>maria@email.com</td>
+                        <td>Usuário</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <script src="javascript.js"></script>
+
+</body>
+</html>

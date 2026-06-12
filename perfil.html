@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Patas do Bem</title>
+
+    <link rel="icon" type="image/png" href="Imagens/pata.PNG">
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="perfil.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <div class="voltar-site">
+
+        <a href="index.html">
+            <i class="ph ph-arrow-left"></i>
+            Voltar ao Site
+        </a>
+
+    </div>
+
+    <section class="perfil-container">
+
+        <div class="perfil-topo">
+
+            <div class="perfil-foto">
+                <i class="ph-fill ph-user-circle"></i>
+            </div>
+
+            <div class="perfil-info">
+                <h1 id="nomePerfil">Usuário</h1>
+                <p id="emailPerfil">email@exemplo.com</p>
+
+                <span class="perfil-tag">
+                    Usuário
+                </span>
+            </div>
+
+            <button class="btn-sair">
+                <i class="ph ph-sign-out"></i>
+                Sair
+            </button>
+
+        </div>
+
+        <div class="perfil-estatisticas">
+
+            <div class="card-estatistica">
+                <i class="ph ph-warning-circle"></i>
+                <h2 id="totalOcorrencias">0</h2>
+                <p>Ocorrências</p>
+            </div>
+
+            <div class="card-estatistica">
+                <i class="ph ph-camera"></i>
+                <h2 id="totalPosts">0</h2>
+                <p>Posts</p>
+            </div>
+
+            <div class="card-estatistica">
+                <i class="ph ph-chat-circle"></i>
+                <h2 id="totalComentarios">0</h2>
+                <p>Comentários</p>
+            </div>
+
+        </div>
+
+        <div class="perfil-acoes">
+
+            <a href="ocorrencias.html" class="acao-card">
+                <i class="ph ph-warning-circle"></i>
+                <span>Nova Ocorrência</span>
+            </a>
+
+            <a href="instacao.html" class="acao-card">
+                <i class="ph ph-camera"></i>
+                <span>Novo Post</span>
+            </a>
+
+            <a href="caes.html" class="acao-card">
+                <i class="ph ph-paw-print"></i>
+                <span>Ver Cães</span>
+            </a>
+
+            <a href="#" class="acao-card">
+                <i class="ph ph-user-gear"></i>
+                <span>Editar Perfil</span>
+            </a>
+
+        </div>
+
+        <div class="perfil-secao">
+
+            <h2>Minhas Ocorrências</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaOcorrenciasUsuario">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <script src="javascript.js"></script>
+
+</body>
+</html>

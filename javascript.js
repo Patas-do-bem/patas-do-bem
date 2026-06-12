@@ -124,7 +124,7 @@ function filterDogs(button, status) {
 
 /* ADOÇÃO*/
 function interestAlert(dogName) {
-    alert(`Obrigado pelo interesse no(a) ${dogName}! Entre em contato conosco através da aba 'Contato' ou compareça à Sala 12 do Bloco B para iniciarmos o processo de entrevista e adoção responsável.`);
+    alert(`Obrigado pelo interesse no(a) ${dogName}! Entre em contato conosco através da aba "Contato" para iniciarmos o processo de entrevista e adoção responsável.`);
 }
 
 /*  DOAÇÕES */
@@ -375,63 +375,50 @@ const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
 
-    loginForm.addEventListener("submit", function (e) {
+    loginForm.addEventListener("submit", async function (e) {
 
         e.preventDefault();
+
+        console.log("Tentando login...");
 
         const email = document.getElementById("email").value.trim().toLowerCase();
         const senha = document.getElementById("senha").value;
 
-        const admin = admins.find(
-            adm => adm.email === email && adm.senha === senha
-        );
+        try {
 
-        if (admin) {
+            const usuario = await loginUsuario(email, senha);
+
+            console.log("Usuário encontrado:", usuario);
 
             localStorage.setItem(
                 "usuarioLogado",
                 JSON.stringify({
-                    nome: "Administrador",
-                    email: admin.email,
-                    tipo: "admin"
+                    id: usuario.id_usuario,
+                    nome: usuario.nome,
+                    email: usuario.email,
+                    tipo: usuario.nivel_acesso
                 })
             );
 
-            window.location.href = "admin.html";
+            if (usuario.nivel_acesso === "admin") {
+                window.location.href = "admin.html";
+            } else {
+                window.location.href = "perfil.html";
+            }
 
-            return;
+        } catch (erro) {
+
+            console.error("Erro no login:", erro);
+
+            alert(
+                "Email ou senha inválidos.\n\nVeja o Console (F12) para mais detalhes."
+            );
+
         }
-
-        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-        const usuario = usuarios.find(
-            usuario =>
-                usuario.email === email &&
-                usuario.senha === senha
-        );
-
-        if (!usuario) {
-
-            alert("Email ou senha inválidos.");
-
-            return;
-        }
-
-        localStorage.setItem(
-            "usuarioLogado",
-            JSON.stringify({
-                nome: usuario.nome,
-                email: usuario.email,
-                tipo: "usuario"
-            })
-        );
-
-        window.location.href = "perfil.html";
 
     });
 
 }
-
 
 
 /*EXIBIR DADOS NO PERFIL*/

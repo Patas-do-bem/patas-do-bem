@@ -312,6 +312,6 @@ Sistema de notificações.
 
 A licença permite uso, modificação, distribuição e compartilhamento do software, desde que os créditos dos autores originais sejam preservados.
 
-12. Considerações Finais
+# Considerações Finais
 
 O Patas do Bem foi desenvolvido seguindo princípios de simplicidade, acessibilidade e colaboração. O projeto permanece aberto para futuras melhorias e contribuições da comunidade, permitindo sua evolução contínua em benefício dos animais e da comunidade acadêmica do IFTM Campus Ituiutaba.

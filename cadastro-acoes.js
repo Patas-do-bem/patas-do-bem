@@ -1,8 +1,5 @@
 
 
-// =========================================================
-// --- PARTE 1: CADASTRO DE CÃES ---
-// =========================================================
 
 async function handleCadastroCao(e) {
     e.preventDefault();
@@ -136,9 +133,7 @@ async function carregarCaesAdocao() {
 }
 
 
-// =========================================================
-// --- PARTE 2: INSTACÃO ---
-// =========================================================
+
 
 async function handlePostInstacao(e) {
     console.log("HANDLE", Date.now());

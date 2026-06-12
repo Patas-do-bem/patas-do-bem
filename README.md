@@ -4,7 +4,7 @@ Bem-vindo ao repositório oficial do projeto Patas-do-bem
 Aqui voce encontra todos os manuais e documentação técnica necessários para o funcionamento do sistema.
 
  
-MANUAL DO USUÁRIO:
+## MANUAL DO USUÁRIO:
 O Patas do Bem é uma plataforma web desenvolvida com o objetivo de centralizar informações sobre os cães presentes no IFTM Campus Ituiutaba. O sistema foi criado para facilitar a divulgação dos animais, apoiar processos de adoção responsável, registrar ocorrências e promover a interação entre a comunidade acadêmica e a equipe responsável pelos cuidados dos cães.
 
 A plataforma pode ser acessada por meio de navegadores de internet em computadores, tablets e smartphones, sem necessidade de instalação.
@@ -131,5 +131,187 @@ Em caso de dúvidas, sugestões ou problemas de utilização, entre em contato a
 O Patas do Bem foi desenvolvido para promover o bem-estar dos cães do IFTM Campus Ituiutaba, facilitar a comunicação entre a comunidade acadêmica e a equipe Fauna e contribuir para ações de adoção responsável e cuidado animal.
 
 A participação da comunidade é fundamental para o sucesso da iniciativa.
-* **Manual Técnico:** Informações sobre a estrutura e configuração.
 
+## Guia do Desenvolvedor
+
+O sistema foi construído utilizando tecnologias web de software livre, priorizando simplicidade, acessibilidade e facilidade de manutenção.
+
+2. Objetivo do Sistema
+
+O Patas do Bem tem como finalidade:
+
+Centralizar informações sobre os cães do campus;
+Facilitar processos de adoção responsável;
+Divulgar necessidades e campanhas de arrecadação;
+Registrar ocorrências relacionadas aos animais;
+Disponibilizar um mapa interativo com pontos de interesse;
+Fortalecer a comunicação entre a comunidade acadêmica e a equipe Fauna.
+3. Tecnologias Utilizadas
+Tecnologia	Finalidade
+HTML5	Estrutura das páginas
+CSS3	Estilização da interface
+JavaScript	Interatividade do sistema
+Leaflet.js	Implementação do mapa interativo
+ArcGIS World Imagery	Camada de visualização dos mapas
+Visual Studio Code	Ambiente de desenvolvimento
+GitHub	Controle de versão
+Netlify	Hospedagem do sistema
+4. Estrutura do Projeto
+
+A organização do projeto segue uma estrutura simples baseada em páginas estáticas.
+
+Exemplo:
+
+patas-do-bem/
+│
+├── index.html
+├── adocao.html
+├── caes.html
+├── ocorrencias.html
+├── contato.html
+├── doacoes.html
+├── mapa.html
+│
+├── css/
+│   ├── style.css
+│   └── paginas.css
+│
+├── js/
+│   ├── script.js
+│   ├── mapa.js
+│   └── filtros.js
+│
+├── img/
+│   ├── logos/
+│   ├── caes/
+│   └── icones/
+│
+└── docs/
+    ├── ManualUsuario.pdf
+    └── GuiaDesenvolvedor.pdf
+
+A estrutura pode variar conforme a evolução do projeto.
+
+5. Funcionalidades Implementadas
+Página Inicial
+
+Apresenta informações sobre o projeto e acesso às demais funcionalidades.
+
+Arquivo principal
+index.html
+InstaCão
+
+Galeria visual contendo imagens dos cães do campus.
+
+Objetivo
+
+Facilitar a divulgação dos animais.
+
+Cães do Campus
+
+Exibe informações detalhadas dos cães cadastrados.
+
+Informações apresentadas
+Nome
+Características
+Idade aproximada
+Situação de vacinação
+Castração
+Histórico
+Adoção Responsável
+
+Disponibiliza orientações e informações sobre adoção.
+
+Doações e Necessidades
+
+Lista itens necessários para os cuidados dos animais.
+
+Registro de Ocorrências
+
+Permite registrar acontecimentos relacionados aos cães.
+
+Mapa Interativo
+
+Implementado utilizando a biblioteca Leaflet.js.
+
+Recursos
+Marcadores personalizados;
+Janelas informativas (popups);
+Localização de pontos importantes;
+Navegação interativa.
+Página de Contato
+
+Disponibiliza informações da equipe responsável e canais de comunicação.
+
+6. Personalização do Sistema
+
+Para adicionar um novo cão:
+
+Inserir a imagem na pasta correspondente.
+Adicionar os dados no arquivo HTML ou estrutura utilizada.
+Atualizar informações relacionadas à adoção, quando necessário.
+
+Para adicionar um novo ponto no mapa:
+
+Abrir o arquivo JavaScript responsável pelo mapa.
+Inserir as coordenadas desejadas.
+Configurar o texto informativo do marcador.
+
+Exemplo:
+
+L.marker([-18.97, -49.46])
+.addTo(map)
+.bindPopup("Novo ponto de interesse");
+7. Hospedagem
+
+O projeto pode ser hospedado gratuitamente utilizando o Netlify.
+
+Procedimento básico:
+
+Realizar upload dos arquivos do projeto.
+Configurar a publicação.
+Gerar o endereço público.
+Testar todas as páginas após a implantação.
+8. Controle de Versão
+
+O código-fonte está disponível em:
+
+GitHub:
+https://github.com/Patas-do-bem/patas-do-bem/tree/main
+
+Recomenda-se utilizar Git para:
+
+Controle de alterações;
+Correção de erros;
+Desenvolvimento colaborativo;
+Registro do histórico de modificações.
+9. Manutenção
+
+As atividades de manutenção incluem:
+
+Correção de erros identificados pelos usuários;
+Atualização das informações dos cães;
+Inclusão de novas funcionalidades;
+Atualização da documentação;
+Verificação da hospedagem;
+Melhorias de desempenho e acessibilidade.
+10. Possíveis Melhorias Futuras
+
+Entre as melhorias planejadas para futuras versões estão:
+
+Integração com banco de dados;
+Sistema de autenticação de usuários;
+Cadastro online de adoções;
+Painel administrativo;
+Upload de imagens pela equipe Fauna;
+Histórico completo dos animais;
+Sistema de notificações.
+11. Licença
+
+## O projeto utiliza a Licença MIT.
+
+A licença permite uso, modificação, distribuição e compartilhamento do software, desde que os créditos dos autores originais sejam preservados.
+
+12. Considerações Finais
+
+O Patas do Bem foi desenvolvido seguindo princípios de simplicidade, acessibilidade e colaboração. O projeto permanece aberto para futuras melhorias e contribuições da comunidade, permitindo sua evolução contínua em benefício dos animais e da comunidade acadêmica do IFTM Campus Ituiutaba.
